@@ -8,7 +8,7 @@ const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"products" | "brands">("products");
 
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
+    <div style={{ display: "flex", height: "100vh", width: "100%" }}>
       <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
       {activeTab === "products" ? <ProductsList /> : <BrandsList />}
     </div>

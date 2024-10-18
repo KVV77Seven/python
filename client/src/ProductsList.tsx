@@ -65,7 +65,11 @@ const ProductsList: React.FC = () => {
   return (
     <div
       ref={parentRef}
-      style={{ height: "100vh", overflow: "auto", width: "100%" }}
+      style={{
+        height: "100vh",
+        overflow: "auto",
+        width: "100%",
+      }}
     >
       <div
         style={{
@@ -88,7 +92,6 @@ const ProductsList: React.FC = () => {
                 width: "100%",
                 height: `${virtualRow.size}px`,
                 transform: `translateY(${virtualRow.start}px)`,
-                padding: "30px",
                 borderBottom: "1px solid #ccc",
               }}
             >
@@ -99,12 +102,12 @@ const ProductsList: React.FC = () => {
                   <div>Больше данных нет</div>
                 )
               ) : (
-                <div style={{ padding: "100px" }}>
+                <>
                   <h2>{product.name}</h2>
                   <p>{product.description}</p>
                   <p>Цена: ${product.price}</p>
                   <p>Бренд: {product.brand}</p>
-                </div>
+                </>
               )}
             </div>
           );
